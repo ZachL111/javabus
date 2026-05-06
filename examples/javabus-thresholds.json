@@ -1,0 +1,17 @@
+{
+  "repo": "javabus",
+  "thresholds": {
+    "signal": 2,
+    "slack": 1,
+    "confidence": 2,
+    "drag": 3,
+    "ship": 163,
+    "watch": 111
+  },
+  "terms": [
+    "queue pressure",
+    "retry load",
+    "worker slack",
+    "session drift"
+  ]
+}

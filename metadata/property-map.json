@@ -1,0 +1,28 @@
+{
+  "repo": "javabus",
+  "language": "Java",
+  "category": "Backend services",
+  "goal": "Implement in-memory broker semantics with consumer groups and ack timeouts.",
+  "weights": {
+    "signal": 2,
+    "slack": 1,
+    "confidence": 2,
+    "drag": 3
+  },
+  "thresholds": {
+    "ship": 163,
+    "watch": 111
+  },
+  "properties": [
+    "raising signal cannot reduce score",
+    "raising drag cannot improve score",
+    "lane labels must match configured thresholds",
+    "golden fixture ids must remain unique"
+  ],
+  "fixture_files": [
+    "fixtures/golden/scoreboard.csv",
+    "fixtures/golden/lane-matrix.csv",
+    "fixtures/fuzz/mutations.csv",
+    "fixtures/fuzz/boundary-cases.jsonl"
+  ]
+}
