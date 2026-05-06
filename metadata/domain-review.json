@@ -1,0 +1,73 @@
+{
+  "repo": "javabus",
+  "language": "Java",
+  "category": "Backend services",
+  "goal": "Implement in-memory broker semantics with consumer groups and ack timeouts.",
+  "review_model": {
+    "terms": [
+      "queue pressure",
+      "retry load",
+      "worker slack",
+      "session drift"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "queue pressure",
+      "signal": 67,
+      "slack": 27,
+      "drag": 21,
+      "confidence": 47,
+      "score": 145,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "retry load",
+      "signal": 77,
+      "slack": 51,
+      "drag": 12,
+      "confidence": 58,
+      "score": 227,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "worker slack",
+      "signal": 65,
+      "slack": 32,
+      "drag": 23,
+      "confidence": 60,
+      "score": 153,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "session drift",
+      "signal": 77,
+      "slack": 38,
+      "drag": 16,
+      "confidence": 61,
+      "score": 205,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "queue pressure",
+      "signal": 65,
+      "slack": 34,
+      "drag": 17,
+      "confidence": 61,
+      "score": 174,
+      "lane": "ship"
+    }
+  ]
+}
